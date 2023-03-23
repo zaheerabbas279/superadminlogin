@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
  * @param {{organization,detials:{userName,password}}} emailBody
  */
 const sendMail = async (toAddress, emailBody) => {
-  console.log("🚀 ~ file: mail.service.js:8 ~ sendMail ~ emailBody:", emailBody)
+  // console.log("🚀 ~ file: mail.service.js:8 ~ sendMail ~ emailBody:", emailBody)
   try {
     const {
       organization,
@@ -25,7 +25,7 @@ const sendMail = async (toAddress, emailBody) => {
       // text: "Test Mail from Cosmonet",
       html: `<div>
       <h2>Hi, ${toAddress},</h2>
-      <p>Please click on the link, to login with your account. <a href="https://www.google.com">${organization}</a> </p>
+      <p>Please click on the link, to login with your account. <a href="http://localhost:3000/${organization}/superAdlogin">${organization} CLICK HERE!</a> </p>
       <h3>Your account details are </h3>
       <p>Email - ${userName} </p>
       <p>Password - ${password} </p>

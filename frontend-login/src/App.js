@@ -18,6 +18,8 @@ import { Adlogin } from './components/AdLogin/Adlogin';
 function App() {
   const [file, setFile] = useState();
 
+  // const { articleId } = useParams();
+
   const handleFileChange = (e) => {
     if (e.target.files) {
       setFile(e.target.files[0]);
@@ -65,9 +67,9 @@ function App() {
       <ParentContext>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' index element={<Home />} />
             <Route path='/superAdminSignup' element={<SuperAdSignup />} />
-            <Route path='/superAdminSignup/superAdlogin' element={<SuperAdlogin />} />
+            <Route path="/:id/superAdlogin" element={<SuperAdlogin />} />
             <Route path='/superadmin/dashboard' element={<AdDashboard />} />
             <Route path='/superadmin/adminsignup' element={<Adminsignup />} />
             <Route path='/superadmin/adminlogin' element={<Adlogin />} />
