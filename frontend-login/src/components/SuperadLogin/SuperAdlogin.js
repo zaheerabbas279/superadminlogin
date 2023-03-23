@@ -1,13 +1,17 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const SuperAdlogin = () => {
+
     const navigate = useNavigate();
     const superAdminLoginSubmit = (e) => {
         e.preventDefault()
         navigate('/superadmin/dashboard')
     }
+    let params = useParams()
+    console.log("🚀 ~ file: SuperAdlogin.js:13 ~ SuperAdlogin ~ params:", params)
+
     return (
 
         <div className='mt-5 text-center'>
